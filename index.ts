@@ -25,6 +25,10 @@ const server = Bun.serve({
                 return new Response(body);
             }
         }
+    },
+
+    fetch(req) {
+        return new Response("404: Not Found", { status: 404 });
     }
 })
 
